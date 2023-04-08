@@ -1,0 +1,55 @@
+::root {
+    /* background */
+    /* --bs-body-bg */
+    /* color */
+    /* --bs-body-color */
+    /* font-family */
+    /* --bs-body-font-family: "Noto Sans", sans-serif; */
+    --bs-heading-font-family: "PT Sans Narrow", sans-serif;
+    /* line-height */
+    /* --bs-body-line-height */
+}
+
+/*
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0d6efd;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+*/
+
+.bs-heading-font {
+    font-family: var(--bs-heading-font-family)!important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+svg {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    color: currentColor;
+}
+.bi-bootstrap-fill {
+    width: 2rem;
+    aspect-ratio: 1;
+}
+/* bootstrap icons classes used */
+/*
+    Syntex : <i class="bi bi-...."></i>
+
+    bootstrap-fill -      bi-bootstrap-fill     css: \F1A6
+    facebook -      bi-facebook     css: \F344
+    instagram -     bi-instagram    css: \F437
+    twitter -       bi-twitter      css: \F5EF
