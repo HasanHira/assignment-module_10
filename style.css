@@ -1,51 +1,54 @@
-::root {
-    /* background */
-    /* --bs-body-bg */
-    /* color */
-    /* --bs-body-color */
-    /* font-family */
-    /* --bs-body-font-family: "Noto Sans", sans-serif; */
-    --bs-heading-font-family: "PT Sans Narrow", sans-serif;
-    /* line-height */
-    /* --bs-body-line-height */
-}
-
+/* -------------------- */
+/* Bootstrap Theme */
+/* -------------------- */
 /*
-.btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #0d6efd;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
-}
+Theme Name: Bosiny
+Theme URI: https://github.com/HasanHira/assignment-module_10
+Author: Md Hasanuzzaman Hira
+Author URI: https://github.com/HasanHira
+Description: An assignment from Ostad.app
+Version: 1.0.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, Bosiny is licensed under the GPL.
+Use it to make something cool, have fun, and share what I've learned with others.
 */
+/* ===========================================================
 
-.bs-heading-font {
-    font-family: var(--bs-heading-font-family)!important;
-    text-transform: uppercase;
-    font-weight: 700;
+===================
+CUSTOM CSS INDEX
+===================
+
+1. Theme CSS
+2. Header area
+3. Main area 
+    3.0 Page Head section
+    3.1 Hero section
+    3.2 Feature section
+    3.3 About section
+4. Page Sections
+    4.1 About page
+        4.1.1 Pricing section
+
+======================================*/
+
+:root {
+    /* colors */
+    --primary-900 : 269, 17%, 27%; /* hsl(269, 17%, 27%) */
+    --primary-400 : 270, 6%, 49%; /* hsl(270, 6%, 49%) */
+    --theme-700 : 100, 9%, 52%; /* hsl(100, 9%, 52%) */
+    --theme-100 : 46, 54%, 82%; /* hsl(46, 54%, 82%) */
+    --accent-400: 22, 51%, 58%; /* hsl(22, 51%, 58%) */
+
+
+    /* font-family */
+    --font-family-heading: 'Inter', sans-serif;;
+    --font-family-body: "Noto Sans", sans-serif;
 }
 
-svg {
-    width: 2rem;
-    height: 2rem;
-    fill: currentColor;
-    color: currentColor;
-}
-.bi-bootstrap-fill {
-    width: 2rem;
-    aspect-ratio: 1;
-}
-/* bootstrap icons classes used */
+/* icons classes used */
 /*
     Syntex : <i class="bi bi-...."></i>
 
@@ -53,3 +56,421 @@ svg {
     facebook -      bi-facebook     css: \F344
     instagram -     bi-instagram    css: \F437
     twitter -       bi-twitter      css: \F5EF
+*/
+
+
+/* ============================= */
+/* 1. Theme CSS                  */
+/* ============================= */
+
+h1, h2, h3, h4, h5, button, a {
+    font-family: var(--font-family-heading);
+}
+
+
+.font-color-900 {
+    color: hsl(var(--primary-900))
+}
+.font-color-700 {
+    color: hsl(var(--theme-700));
+}
+.font-color-400 {
+    color: hsl(var(--accent-400));
+}
+
+.btn-businy-primary {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: hsl(var(--theme-700));
+    color: #ffffff;
+    border: none;
+    outline: transparent;
+
+    transition: all 300ms ease-in-out;
+}
+
+.btn-businy-accent {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: hsl(var(--accent-400));
+    color: #ffffff;
+    border: none;
+    outline: transparent;
+
+    transition: all 300ms ease-in-out;
+}
+.btn-businy-primary:hover,
+.btn-businy-accent:hover {
+    background: hsl(var(--primary-900));
+    color: #ffffff;
+    box-shadow: 2px 2px 3px 1px hsl(var(--primary-900), 0.5);
+}
+.btn-businy-primary:focus-visible,
+.btn-businy-accent:focus-visible {
+    background: hsl(var(--primary-900));
+    color: #ffffff;
+    outline-offset: 0.5em;
+    outline: 2px solid hsl(var(--accent-400));
+
+}
+
+
+svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    color: currentColor;
+}
+/* .btn-bosiny */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
+.section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.section-title {
+    margin-bottom: 3rem;
+}
+.section-title h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+body {
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    font-weight: normal;
+    color: hsl(var(--primary-400));
+}
+
+
+/* ============================= */
+/* 2. Header area                  */
+/* ============================= */
+.header-sticky {
+    background: white;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Logo */
+
+.bosiny-logo,
+.bosiny-footer-logo {
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+.bosiny-footer-logo {
+    width: 1rem;
+}
+
+.logo-text {
+    font-family: var(--font-family-heading);
+    color: hsl(var(--primary-900));
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Navbar */
+.bosiny-nav li a.nav-link {
+    color: hsl(var(--theme-700));
+    position: relative;
+    
+    transition: all 300ms ease-in-out;
+}
+.bosiny-nav li a.nav-link::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 10%;
+    background: hsl(var(--accent-400));
+    transform-origin: left;
+    
+    transition: all 300ms ease-in-out;
+}
+.bosiny-nav li a.nav-link:focus::after,
+.bosiny-nav li a.nav-link:hover::after {
+    width: 100%;
+}
+.bosiny-nav li a.nav-link:has(.active):focus::after,
+.bosiny-nav li a.nav-link:has(.active):hover::after {
+    width: 0%;
+}
+.bosiny-nav li a.nav-link.active {
+    color: hsl(var(--primary-900));
+    font-weight: 700;
+}
+.bosiny-nav li a.nav-link.active::after {
+    opacity: 0;
+}
+
+/* ============================= */
+/* 3. Main area                  */
+/* ============================= */
+
+/* ============ 3.0 Page Head section ============ */
+.page-head {
+    position: relative;
+    background: linear-gradient(85deg, hsl(var(--primary-900)), hsl(var(--theme-700)));
+    padding-top: 9em;
+    padding-bottom: 5em;
+}
+.page-head::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("assets/images/pattern-bg_01.jpg");
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+.about-about {
+    background: hsl(var(--theme-700), 0.1);
+}
+.page-title h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.page-path {
+    background: linear-gradient(90deg, transparent, hsl(var(--theme-100), 0.1), transparent);
+    padding: 0.5em 0em;
+    margin: 0;
+}
+.page-path ol {
+    margin: 0;
+    padding: 0;
+}
+.page-path ol li {
+    list-style: none;
+}
+.page-path ol li a{
+    color: #fff;
+}
+.page-path ol li.active {
+    color: #fff;
+}
+
+
+/* ============ 3.1 Hero section ============ */
+.hero-area {
+    position: relative;
+    margin-top: 3.6rem;
+}
+.section-ornament {
+    position: absolute;
+    width: 11rem;
+    aspect-ratio: 1;
+    bottom: -25%;
+    left: 10%;
+}
+
+.businy-slider {
+    max-height: 35rem;
+}
+.title-hints {
+    border: none;
+    padding: .25em .75em;
+    border-radius: 0.5vmin;
+    background: hsl(var(--theme-100), 0.3);
+    color: hsl(var(--theme-700));
+    margin-bottom: 1rem;
+}
+.hero-caption h1 {
+    font-size: 3.5rem;
+}
+.hero-caption p,
+.section-title p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Carousel */
+.businy-slider::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+    background: hsl(var(--theme-700));
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    background: hsl(var(--accent-400));
+}
+.carousel-indicators li {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    color: transparent;
+    background-color: rgba(255,255,255,.5);
+}
+.carousel-indicators .active {
+    background-color: #fff;
+}
+/* transition duration to control the speed of fade effect */
+.carousel-item {
+    transition: transform 1000ms ease-in-out;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 1000ms;
+}
+
+/* ============ 3.2 Feature section ============ */
+.feature-area {
+    padding-bottom: 3rem;
+    background: hsl(var(--theme-700), 0.07);
+}
+
+/* Card */
+.card--feature {
+    border: none;
+    box-shadow: 5px 5px 10px 1px hsl(var(--primary-400), 0.2);
+}
+.card-content-media img {
+    width: 80%;
+}
+.card-content-text h3 {
+    font-size: 1.2rem;
+}
+.card-content-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: hsl(var(--primary-400));
+}
+
+/* ============ 3.3 About section ============ */
+.single-about {
+    border-bottom: 1px solid hsl(var(--primary-400), 0.2);
+}
+.single-about h4 {
+    font-size: 1.4rem;
+    color: hsl(var(--theme-700));
+}
+
+
+/* ============================= */
+/* 4. Page Sections                  */
+/* ============================= */
+
+/* ============ 4.1 About page ============ */
+
+/* +++++++++++++++++++++++++++++++++ */
+/* +++++ 4.1.1 Pricing section +++++ */
+/* +++++++++++++++++++++++++++++++++ */
+.pricing-card-area {
+    background: hsl(var(--accent-400), 0.18);
+    padding: 6em 0;
+}
+
+.price-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+.price-title p {
+    font-size: 1.3em;
+    line-height: 1.4;
+    color: hsl(var(--primary-900));
+    margin-bottom: 1em;
+}
+.price-list-text li {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    list-style: none;
+}
+.price-list-text li::before {
+    content: "\2022";
+    color: #4AA8C6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1em;
+}
+.price-tab-menu {
+    background: #fff;
+    border-radius: 2vmin;
+    box-shadow: 2px 2px 10px 5px hsl(var(--primary-400), 0.2);
+}
+
+.price-nav-item .nav-link {
+    background: hsl(var(--theme-700), 0.2);
+    color: hsl(var(--theme-700));
+    border-radius: 0.3em;
+    font-weight: bold;
+    border: none;
+}
+.price-nav-item .nav-link.active {
+    background: hsl(var(--theme-700));
+    color: #ffffff;
+    border-radius: 0.3em;
+}
+.price-rate {
+    font-family: var(--font-family-heading);
+    font-size: 3rem;
+    color: hsl(var(--primary-900));
+}
+.price-tag {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.dollar-icon {
+    font-size: 1.5rem;
+    font-weight: 400;
+    align-self: center;
+}
+.packge-name {
+    font-size: 1rem;
+    font-weight: 400;
+    align-self: center;
+    margin-left: 0.3em;
+}
+    
+/* +++++++++++++++++++++++++++++++++ */
+/* +++++ 4.1.2 Logo Slider section +++++ */
+/* +++++++++++++++++++++++++++++++++ */
+.logo-slider {
+    padding: 4em 0;
+    background: linear-gradient(90deg, hsl(var(--primary-900)), hsl(var(--accent-400)));
+}
+
+.slick-slider .slide-logo {
+    padding-inline: 3em;
+    display: block;
+}
+.slide-logo img {
+    width: 100%;
+}
