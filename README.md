@@ -11,7 +11,7 @@ In this report, I will be discussing the design and implementation of my persona
 
 
 
-![](https://i.imgur.com/a2HSXt5.png "This is MyBlog homepage view.")
+![](https://postimg.cc/21wkdmB7 "This is MyBlog homepage view.")
 
 ## Links
 
