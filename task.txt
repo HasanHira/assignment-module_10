@@ -31,11 +31,6 @@ i) Ensure that your website is accessible to all users, including those with dis
 j)Test your website in multiple browsers and devices to ensure that it works as expected.
 
 
- 
-// color concepts: https://www.canva.com/learn/contrasting-colors/
-
-Submit Instructions : 
-
 
 1. Submit your completed assignment, including the HTML and CSS files, 
 
