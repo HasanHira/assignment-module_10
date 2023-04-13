@@ -29,9 +29,11 @@ CUSTOM CSS INDEX
     3.2 Feature section
     3.3 About section
 4. Page Sections
-    4.1 About page
-        4.1.1 Pricing section
-        4.1.2 Logo Slider section
+    4.1 Pricing section
+    4.2 Logo Slider section
+    4.3 Our Team section
+    4.4 Gallery section
+
 
 ======================================*/
 
@@ -388,14 +390,12 @@ body {
 
 
 /* ============================= */
-/* 4. Page Sections                  */
+/* 4. Page Sections              */
 /* ============================= */
 
-/* ============ 4.1 About page ============ */
-
-/* +++++++++++++++++++++++++++++++++ */
-/* +++++ 4.1.1 Pricing section +++++ */
-/* +++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++ */
+/* +++++ 4.1 Pricing section +++++ */
+/* +++++++++++++++++++++++++++++++ */
 .pricing-card-area {
     background: hsl(var(--accent-400), 0.18);
     padding: 6em 0;
@@ -466,9 +466,9 @@ body {
     margin-left: 0.3em;
 }
     
-/* +++++++++++++++++++++++++++++++++++++ */
-/* +++++ 4.1.2 Logo Slider section +++++ */
-/* +++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++ */
+/* +++++ 4.2 Logo Slider section +++++ */
+/* +++++++++++++++++++++++++++++++++++ */
 .logo-slider {
     padding: 4em 0;
     background: linear-gradient(90deg, hsl(var(--primary-900)), hsl(var(--accent-400)));
@@ -484,8 +484,8 @@ body {
 
 
 /* ++++++++++++++++++++++++++++++++++ */
-/* +++++ 4.1.3 Our Team section +++++ */
-/* ++++++++++++++++++++++++++++++++++ */
+/* +++++ 4.3 Our Team section +++++ */
+/* ++++++++++++++++++++++++++++++++ */
 .team-title {
     position: relative;
 }
@@ -526,4 +526,39 @@ body {
 }
 .social-contact ul li a:hover {
     background: hsl(var(--accent-400), 0.5);
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* +++++ 4.4 Gallery section +++++ */
+/* +++++++++++++++++++++++++++++++ */
+.image-place {
+    position: relative;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    opacity: 0.85;
+    text-align: center;
+    padding-top: 60px;
+    background-color: #51594D;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+}
+.overlay .title,
+.overlay .description{
+    display: block;
+    width: 100%;
+}
+.overlay .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.overlay .description{
+    font-size: 1rem;
+    font-weight: normal;
+    color: #CA855C;
 }

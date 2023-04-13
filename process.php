@@ -67,14 +67,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="d-flex justify-content-center page-title">
-                            <h2 class="mb-3 fw-semibold">Contact</h2>
+                            <h2 class="mb-3 fw-semibold">Sucess Page</h2>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <nav class="d-flex justify-content-center page-path" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                <li class="breadcrumb-item active" aria-current="page">Sucess</li>
                             </ol>
                         </nav>
                     </div>
@@ -85,68 +85,34 @@
 
         <section class="form-area section-padding">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-12">
-                        
 
+                        <?php
+                            if($_SERVER["REQUEST_METHOD"] == "POST") {
+                                $name = trim($_POST["name"]);
+                                $email = trim($_POST["email"]);
+                                $phone = trim($_POST["phone"]);
+                                $message = trim($_POST["message"]);
 
-<!-- main start -->
-<main>
+                                if(empty($name) || empty($email) || empty($phone) || empty($message)) {
+                                    echo "All fields are required and must not be empty.";
+                                } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                    echo "Invalid email format.";
+                                } else {; ?>
 
-    <section class="page-head">
-        <div class="container">
-            <h1 class="hero-heading"><?php echo $page_title; ?></h1>
-        </div>
-    </section>
+                                    <h2 class="sucess-text">
+                                        <?php echo "Registration successful. Welcome, $name!"; ?>
+                                    </h2>
 
-<?php
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        $fname = trim($_POST["fname"]);
-        $email = trim($_POST["email"]);
-        $subject = trim($_POST["subject"]);
-        $message = trim($_POST["message"]);
+                                <?php
+                                }
+                            } ; ?>
 
-        if(empty($fname) || empty($email) || empty($subject) || empty($message)) {
-            echo "All fields are required and must not be empty.";
-        } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "Invalid email format.";
-        } else {; ?>
-
-        <div class="container">
-            <h2 class="sucess-text">
-                <?php echo "Registration successful. Welcome, $fname!"; ?>
-            </h2>
-        </div>
-            
-        <?php
-        }
-        $user_data = [$fname, $email, $subject, $message];
-        $fp = fopen('users.csv', 'a');
-        fputcsv($fp, $user_data);
-        fclose($fp);
-    }
-?>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- main end -->
