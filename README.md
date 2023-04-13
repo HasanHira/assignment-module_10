@@ -11,7 +11,7 @@ In this report, I will be discussing the design and implementation of my persona
 
 
 
-![](https://postimg.cc/21wkdmB7 "This is MyBlog homepage view.")
+![](https://drive.google.com/uc?export=download&id=1C1O761ZkKqJmYm7cml8mMNO1SqQzASBd "This is MyBlog homepage view.")
 
 ## Links
 
