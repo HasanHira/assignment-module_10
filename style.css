@@ -34,6 +34,8 @@ CUSTOM CSS INDEX
     4.3 Our Team section
     4.4 Gallery section
 
+Media Queries
+
 
 ======================================*/
 
@@ -159,14 +161,14 @@ svg {
     border: 0;
 }
 .section-padding {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .section-title {
     margin-bottom: 3rem;
 }
 .section-title h2 {
-    font-size: 2.75rem;
+    font-size: 1.85rem;
     font-weight: 700;
     text-transform: capitalize;
 }
@@ -188,6 +190,12 @@ body {
     width: 100%;
     left: 0;
     top: 0;
+}
+
+.bosiny-nav a {
+    display: flex;
+    align-items: flex-start!important;
+    margin-top: 0.7em;
 }
 
 /* Logo */
@@ -299,7 +307,9 @@ body {
 /* ============ 3.1 Hero section ============ */
 .hero-area {
     position: relative;
-    margin-top: 3.6rem;
+    margin-top: 5.5rem;
+    background: url("assets/images/pattern-bg_01.jpg");
+    mix-blend-mode: multiply;
 }
 .section-ornament {
     position: absolute;
@@ -321,7 +331,7 @@ body {
     margin-bottom: 1rem;
 }
 .hero-caption h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 .hero-caption p,
 .section-title p {
@@ -680,4 +690,38 @@ body {
 .widget-list li a:focus {
     color: hsl(var(--accent-400));
     margin-left: 0.5rem;
+}
+
+.contact-form {
+    padding: 0.7rem;
+    background: hsl(var(--primary-400), 0.05);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .hero-area {
+        background: none;
+    }
+    .section-ornament {
+        left: 70%;
+    }
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+    .hero-caption h1 {
+        font-size: 2.8rem;
+    }
+}
+@media (min-width: 1200px) {
+    .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .section-ornament {
+        left: 10%;
+    }
 }

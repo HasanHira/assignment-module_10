@@ -33,14 +33,14 @@
     <header>
         <div class="header-sticky sticky-top border-bottom">
             <div class="container">
-                <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex flex-wrap justify-content-between bosiny-nav">
                     <a href="#" class="navbar-brand d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                         <img class="bosiny-logo" src="assets/images/bosiny-logo.svg" alt="Bosiny header Logo">
                         <span class="d-none d-sm-block fs-4 ms-3 logo-text">bosiny</span>
                     </a>
-                    <nav class="navbar navbar-expand-lg">
+                    <nav class="navbar navbar-expand-md">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav nav bosiny-nav" role="list">
@@ -88,15 +88,15 @@
         <section class="page-main-section section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 my-auto">
+                    <div class="col-lg-6 my-auto order-1 order-lg-0">
                         <div class="section-title">
-                            <h1 class="mt-2 mb-4 font-color-900 fw-bold">About us.</h1>
+                            <h1 class="mt-2 mb-4 font-color-900 fw-bold">About us</h1>
                             <p>Placeholders can be used to enhance the experience of your application. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them.</p>
                             <p>Easily crop, resize, add frames or text, and customize with graphics or stickers, all in one click.</p>
                             <a href="contact.html" class="my-3 btn btn-businy-accent">Get Started</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-0 order-lg-1">
                         <img class="d-block w-100" src="assets/images/page-head_about.jpg" alt="Discuss with other developers.">
                     </div>
                 </div>
@@ -105,18 +105,19 @@
         <!-- page main section end -->
 
         <!-- about section start -->
-        <section class="about-area section-padding about-about">
+        <section class="about-area section-padding">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-content-media">
+                    <div class="col-md-4 col-lg-6">
+                        <div class="about-content-media mb-4">
                             <img class="d-block w-100" src="assets/images/section-about.jpg" alt="members are working">
                         </div>
                     </div>
-                    <div class="offset-lg-1 col-lg-4">
+                    <div class="col-md-8 offset-lg-1 col-lg-4">
                         <div class="about-content-text">
                             <div class="section-title">
                                 <h2 class="mb-4 font-color-900">All the features you’d expect.</h2>
+                                <!-- <p>All device responsiv are available that use the same viewport breakpoints as the grid.</p> -->
                             </div>
 
                             <!-- single-row -->
@@ -124,7 +125,7 @@
                                 <h4 class="fw-bold">All device responsiv are available</h4>
                                 <p>A subsection is a bordered box with some padding around its content. It includes options for headers, footers, content, colors, etc.</p>
                             </div>
-
+                            
                             <!-- single-row -->
                             <div class="pb-1 pt-3 mb-3 single-about">
                                 <h4 class="fw-bold">It includes options for headers</h4>
@@ -145,7 +146,7 @@
         <!-- about section end -->
 
         <!-- logo carousel start -->
-        <section class="logo-slider section-padding">
+        <section class="d-none d-md-block logo-slider section-padding">
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-1 col-xl-10">
@@ -170,7 +171,7 @@
         <section class="pricing-card-area">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="offset-xl-1 col-xl-5">
+                    <div class="offset-lg-1 col-lg-5 offset-md-0 col-md-6">
                         <div class="price-title section-tittle mb-15">
                             <h2 class="font-color-900 fw-semibold">Build beautiful, feature-complete websites.</h2>
                             <p>Facilisis ac eget mauris nulla enim a diam. Posuere vel eleifend augue laoreet non praesent ultrices.</p>
@@ -180,7 +181,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="offset-xl-1 col-xl-4">
+                    <div class="offset-lg-1 col-lg-4 offset-md-0 col-md-6">
                         <div class="price-card">
                             <div class="py-5 price-tab-menu">
                                 <ul class="nav tab-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
@@ -230,7 +231,7 @@
                 <div class="row justify-content-center">
 
                     <!-- single team-member card 01 -->
-                    <div class="col-md-3">
+                    <div class="col-6 col-lg-3 mb-4">
                         <div class="card card--team">
                             <div class="card-body text-center">
                                 <div class="mb-3 card-content-media single-member">
@@ -252,7 +253,7 @@
                     </div>
 
                     <!-- single team-member card 02 -->
-                    <div class="col-md-3">
+                    <div class="col-6 col-lg-3 mb-4">
                         <div class="card card--team">
                             <div class="card-body text-center">
                                 <div class="mb-3 card-content-media single-member">
@@ -274,7 +275,7 @@
                     </div>
 
                     <!-- single team-member card 03 -->
-                    <div class="col-md-3">
+                    <div class="col-6 col-lg-3 mb-4">
                         <div class="card card--team">
                             <div class="card-body text-center">
                                 <div class="mb-3 card-content-media single-member">
@@ -296,7 +297,7 @@
                     </div>
 
                     <!-- single team-member card 04 -->
-                    <div class="col-md-3">
+                    <div class="col-6 col-lg-3 mb-4">
                         <div class="card card--team">
                             <div class="card-body text-center">
                                 <div class="mb-3 card-content-media single-member">
@@ -336,11 +337,11 @@
                     </a>
                     <p class="mb-3 mb-md-0 text-body-secondary"><span class="d-none d-sm-inline-block logo-text">bosiny</span> &copy; 2023 Company, Inc</p>
                 </div>
-
+            
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" role="list">
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><img class="bi bi-twitter" src="assets/icons/twitter.svg" alt=""></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><img class="bi bi-instagram" src="assets/icons/instagram.svg" alt=""></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><img class="bi bi-facebook" src="assets/icons/facebook.svg" alt=""></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/HasanuzamanHira"><img class="bi bi-twitter" src="assets/icons/twitter.svg" alt=""></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/webdesign_hasanhira/"><img class="bi bi-instagram" src="assets/icons/instagram.svg" alt=""></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/hz.hira"><img class="bi bi-facebook" src="assets/icons/facebook.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>
