@@ -86,60 +86,66 @@
         <section class="form-area section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="contact-address">
-                            <div class="about-content-text">
-                                <div class="section-title">
-                                    <h2 class="mb-4 font-color-900">We are here.</h2>
-                                </div>
-    
-                                <!-- single-row -->
-                                <div class="pb-1 mb-3 single-about">
-                                    <h4 class="fw-bold">Office:</h4>
-                                    <p>107, Konapara main road, Paradogair, Jatrabari, Dhaka. Bangladesh.</p>
-                                </div>
-                                <!-- single-row -->
-                                <div class="pb-1 mb-3 single-about">
-                                    <h4 class="fw-bold">Phone:</h4>
-                                    <p>+880-192-232-7879</p>
-                                </div>
-                                <!-- single-row -->
-                                <div class="pb-1 mb-3 single-about">
-                                    <h4 class="fw-bold">Email:</h4>
-                                    <p>hasanhira.me@gmail.com</p>
-                                </div>
-                                <p>We are glad to here from you. You can ask anything. Thank you </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offset-xl-1 col-xl-7">
-                        <!-- form -->
-<!-- name, email, phone number, and message -->
-                        <div class="contact-form">
-                            <form action="">
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">Name:</label>
-                                    <input type="text" name="name" class="form-control" id="username" placeholder="Your name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email address">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone:</label>
-                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone number">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea name="message" id="message" cols="30" rows="6" class="form-control" placeholder="Type your message"></textarea>
-                                </div>
-                                <button type="submit" value="submit" class="btn btn-businy-accent">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <div class="col-md-12">
+                        
+
+
+<!-- main start -->
+<main>
+
+    <section class="page-head">
+        <div class="container">
+            <h1 class="hero-heading"><?php echo $page_title; ?></h1>
+        </div>
+    </section>
+
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $fname = trim($_POST["fname"]);
+        $email = trim($_POST["email"]);
+        $subject = trim($_POST["subject"]);
+        $message = trim($_POST["message"]);
+
+        if(empty($fname) || empty($email) || empty($subject) || empty($message)) {
+            echo "All fields are required and must not be empty.";
+        } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Invalid email format.";
+        } else {; ?>
+
+        <div class="container">
+            <h2 class="sucess-text">
+                <?php echo "Registration successful. Welcome, $fname!"; ?>
+            </h2>
+        </div>
+            
+        <?php
+        }
+        $user_data = [$fname, $email, $subject, $message];
+        $fp = fopen('users.csv', 'a');
+        fputcsv($fp, $user_data);
+        fclose($fp);
+    }
+?>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </main>
